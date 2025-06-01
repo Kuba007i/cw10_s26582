@@ -1,0 +1,24 @@
+﻿### Pobierz wycieczki (GET z paginacją)
+GET http://localhost:5026/api/trips?page=1&pageSize=5
+Accept: application/json
+
+###
+
+### Dodaj klienta do wycieczki
+POST http://localhost:5026/api/trips/1/clients
+Content-Type: application/json
+
+{
+  "FirstName": "Anna",
+  "LastName": "Nowak",
+  "Email": "anna.nowak@example.com",
+  "Telephone": "111-222-333",
+  "Pesel": "95010112345",
+  "PaymentDate": "2025-06-01T12:00:00"
+}
+
+###
+
+### Usuń klienta (jeśli nie ma przypisanych wycieczek)
+DELETE http://localhost:5026/api/clients/1
+Accept: application/json
